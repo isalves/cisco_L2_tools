@@ -19,16 +19,15 @@ interface = input('Interface: ')
 vlan = input('VLAN assigment: ')
 print ('\n)
 
+""" SSH Connection to the device """
 device = ConnectHandler(device_type=platform, ip=host, username=username, password=password)
 
-""" Assigment physical port to VLAN  """
-
+""" Assigment physical port to VLAN commands  """
 command_interface = 'interface ' + interface
 command_vlan = 'switchport access vlan ' + str(vlan)
 commands = [command_interface, 'switchport mode access', command_vlan]
 
-""" VLAN Assigment validation  """
-
+""" VLAN application & validation  """
 print ('\n\n')
 print(>>>>>>>>>>OUTPUT<<<<<<<<<<)
 output = device.config_mode()
