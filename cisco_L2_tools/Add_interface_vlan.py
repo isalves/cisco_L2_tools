@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-""" Add_interface_vlan.py version 0.2 """
+""" Add_interface_vlan.py version 0.3 """
 """ Associate a VLAN to physical interface on Cisco IOS device """
-""" By Israel Alves dos Santos Filho - 10/16/2018 """
+""" By Israel Alves dos Santos Filho - 10/22/2018 """
 
 from netmiko import ConnectHandler
 
@@ -10,7 +10,7 @@ print ('Credentials to be used to access the device')
 username = input('Username: ')
 password = input('Password: ')
 platform = 'cisco_ios'
-host = '10.0.0.1'
+host = input('IP Address: ')
 print ('\n')
 
 """ Interface info & Vlan assigment """
