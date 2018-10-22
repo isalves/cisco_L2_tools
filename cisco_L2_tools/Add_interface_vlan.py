@@ -11,13 +11,13 @@ username = input('Username: ')
 password = input('Password: ')
 platform = 'cisco_ios'
 host = '10.0.0.1'
-print ('\n)
+print ('\n')
 
 """ Interface info & Vlan assigment """
 print ('Interface number and VLAN assigment')
 interface = input('Interface: ')
 vlan = input('VLAN assigment: ')
-print ('\n)
+print ('\n')
 
 """ SSH Connection to the device """
 device = ConnectHandler(device_type=platform, ip=host, username=username, password=password)
@@ -29,7 +29,7 @@ commands = [command_interface, 'switchport mode access', command_vlan]
 
 """ VLAN application & validation  """
 print ('\n\n')
-print(>>>>>>>>>>OUTPUT<<<<<<<<<<)
+print('>>>>>>>>>>OUTPUT<<<<<<<<<<')
 output = device.config_mode()
 print(output)
 output = device.send_config_set(commands)
