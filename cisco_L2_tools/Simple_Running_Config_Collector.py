@@ -9,7 +9,7 @@ from netmiko import ConnectHandler
 username = input('Username: ')
 password = input('Password: ')
 platform = 'cisco_ios'
-host = input('Endereço IP: ')
+host = input('IP Address: ')
 port = '22'
 
 device = ConnectHandler(device_type=platform, ip=host, username=username, password=password, port=port)
