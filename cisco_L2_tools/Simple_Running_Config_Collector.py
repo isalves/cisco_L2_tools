@@ -17,7 +17,6 @@ device = ConnectHandler(device_type=platform, ip=host, username=username, passwo
 """ Generating the currenty configuration """
 output = device.send_command('terminal length 0\n')
 output = device.send_command('show run\n')
-print(output)
 
 """ Creating the local file to store the configuration """
 filename = 'Host_'+ str(host) + '.txt'
@@ -25,6 +24,5 @@ file = open(filename,'w')
 file.write (output)
 file.close()
 
-output = device.send_command('exit\n')
 device.disconnect()
 print('The running configuration is saved on ', filename)
