@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-""" Running_Config_Colletor.py version 0.1 """
+""" Running_Config_Colletor.py version 0.2 """
 """ Collects several runnging configuration of several Cisco IOS devices """
 """ By Israel Alves dos Santos Filho - 12/11/2019 """
 
